@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "Refreshing font cache with fonts: {{ .nerdfonts.fonts }} for NerdFonts {{ (gitHubLatestRelease "ryanoasis/nerd-fonts").TagName }}"
+fc-cache -vf {{ .chezmoi.homeDir }}/.local/share/fonts/NerdFonts

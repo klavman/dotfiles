@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+echo "Installing nvm: {{ (gitHubLatestRelease "nvm-sh/nvm").TagName }}"
+curl -o- "https://raw.githubusercontent.com/nvm-sh/nvm/{{ (gitHubLatestRelease "nvm-sh/nvm").TagName }}/install.sh" | bash
+
