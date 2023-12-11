@@ -1,0 +1,45 @@
+[".oh-my-zsh"]
+    type = "archive"
+    url = "https://github.com/ohmyzsh/ohmyzsh/archive/master.tar.gz"
+    exact = true
+    stripComponents = 1
+    refreshPeriod = "168h"
+
+{{ range $plugin := .ohmyzsh.plugins }}
+[".oh-my-zsh/custom/plugins/{{ $plugin }}"]
+    type = "archive"
+    url = "https://github.com/zsh-users/{{ $plugin }}/archive/master.tar.gz"
+    exact = true
+    stripComponents = 1
+    refreshPeriod = "168h"
+{{ end }}
+
+[".oh-my-zsh/custom/themes/powerlevel10k"]
+    type = "archive"
+    url = "https://github.com/romkatv/powerlevel10k/archive/v1.15.0.tar.gz"
+    exact = true
+    stripComponents = 1
+[".pyenv"]
+    type = "git-repo"
+    url = "https://github.com/pyenv/pyenv.git"
+    stripComponents = 1
+[".fzf"]
+    type = "git-repo"
+    url = "https://github.com/junegunn/fzf.git"
+    clone.args = ["--depth", "1"]
+    stripComponents = 1
+
+{{ range $font := .nerdfonts.fonts }}
+[".local/share/fonts/NerdFonts/{{ $font }}"]
+    type = "archive"
+    url = "https://github.com/ryanoasis/nerd-fonts/releases/download/{{(gitHubLatestRelease "ryanoasis/nerd-fonts").TagName}}/{{ $font }}.zip"
+    exclude = [
+        "*Windows Compatible*.ttf",
+        "*Windows Compatible*.otf",
+        "LICENSE",
+        "*.txt",
+        "*.md",
+        ".uuid"
+    ]
+{{ end }}
+
