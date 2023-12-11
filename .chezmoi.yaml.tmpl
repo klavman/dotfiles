@@ -1,0 +1,10 @@
+{{- $email := promptString "personal email" -}}
+{{- $editor := promptString "editor by default (i.e. vim)" -}}
+
+sourceDir: {{ .chezmoi.sourceDir }}
+
+data:
+  email: {{ $email }}
+
+edit:
+  command: {{ $editor }}
