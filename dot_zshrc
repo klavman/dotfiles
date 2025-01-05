@@ -6,7 +6,7 @@ fi
 source $HOME/.zsh/exports.zsh
 source $HOME/.zsh/history.zsh
 source $HOME/.zsh/aliases.zsh
-
+source $HOME/.zsh/functions.zsh
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
