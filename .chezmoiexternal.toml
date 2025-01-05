@@ -19,10 +19,6 @@
     url = "https://github.com/romkatv/powerlevel10k/archive/{{ (gitHubLatestTag "romkatv/powerlevel10k").Name }}.tar.gz"
     exact = true
     stripComponents = 1
-[".pyenv"]
-    type = "git-repo"
-    url = "https://github.com/pyenv/pyenv.git"
-    stripComponents = 1
 [".fzf"]
     type = "git-repo"
     url = "https://github.com/junegunn/fzf.git"

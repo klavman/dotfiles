@@ -19,7 +19,7 @@ This repository contains dotfiles managed by [chezmoi](https://www.chezmoi.io/).
 
 - Zsh + Oh my Zsh + Powerlevel10k with auto-suggestions and syntax-higlighting
 - fzf
-- pyenv
+- uv
 - nvm
 - nerdfonts
 
